@@ -76,3 +76,56 @@ nav ul {
   opacity: 1;
   transform: scaleY(1);
 }
+form {
+  border: 3px solid #e8e8e8;
+  margin: 15px;
+  padding: 8px;
+  background-color: white;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+button {
+  background-color: #4d824f;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+button:hover {
+  opacity: 0.8;
+}
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  * {box-sizing: border-box}
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ .signupbtn {
+  float: left;
+  width: 100%;
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+@media screen and (max-width: 300px) {
+  .signupbtn {
+    width: 100%;
+  }
+}
