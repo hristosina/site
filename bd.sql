@@ -1,3 +1,4 @@
+ CREATE DATABASE 'site';
  CREATE TABLE IF NOT EXISTS 'users' (
  'id' int(3) NOT NULL AUTO_INCREMENT ,
  'email' varchar(30) NOT NULL
