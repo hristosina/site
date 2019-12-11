@@ -9,8 +9,8 @@
   <a href="" class="logo">Библиотека</a>
   <nav>
       <ul class="topmenu">
-        <li><a href="main.html">Главная</a></li>
-        <li><a href="" class="submenu-link">Категория</a>
+        <li><a href="main.php">Главная</a></li>
+        <li><a href="catalog.php" class="submenu-link">Категория</a>
           <ul class="submenu">
             <li><a href="">Понравилось пользователям</a></li>
             <li><a href="">Русская литература</a></li>
@@ -23,22 +23,22 @@
     </nav>
 </header> 
 <body>
-<form action="action_page.php">
+<form action="check.php" method="post">
   <div>
     <h1>Зарегистрироваться</h1>
     <p>Пожалуйста, заполните поля для создания учетной записи.</p>
     <hr>
     <label for="name"><b>Имя пользователя</b></label>
     <input type="text" placeholder="Введите имя пользователя" name="name" required>
-	
+	<p style="font-style:italic; color:grey">Имя пользователя должно начинаться с буквы латинского алфавита, содержать только символы латинского алфавита, цифры и знак "_", содержать не меньше 6 символов.</p>
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Введите Email" name="email" required>
-
-    <label for="psw"><b>Пароль</b></label>
-    <input type="password" placeholder="Введите пароль" name="psw" required>
-
-    <label for="psw-repeat"><b>Повторите пароль</b></label>
-    <input type="password" placeholder="Повторите пароль" name="psw-repeat" required>
+    <label for="password"><b>Пароль</b></label>
+    <input type="password" placeholder="Введите пароль" name="password" required>
+<p style="font-style:italic; color:grey">Пароль должен содержать хотя бы 1 строчную и заглавную буквы латинского алфавита, цифру и один из знаков пунктуации или один из символов: %, $, #, @, &, *, ^, |, \, /, ~, [, ], {, };содержать не меньше 8 символов
+</p>
+    <label for="confpass"><b>Повторите пароль</b></label>
+    <input type="password" placeholder="Повторите пароль" name="confpass" required>
     <div class="clearfix">
       <button type="submit" class="signupbtn">Зарегистрироваться</button>
     </div>
