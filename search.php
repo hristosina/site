@@ -9,8 +9,8 @@
   <a href="" class="logo">Библиотека</a>
   <nav>
       <ul class="topmenu">
-        <li><a href="main.html">Главная</a></li>
-        <li><a href="" class="submenu-link">Категория</a>
+        <li><a href="main.php">Главная</a></li>
+        <li><a href="catalog.php" class="submenu-link">Категория</a>
           <ul class="submenu">
             <li><a href="">Понравилось пользователям</a></li>
             <li><a href="">Русская литература</a></li>
@@ -18,7 +18,7 @@
           </ul>
         </li>
         <li><a href="search.php">Поиск</a></li>
-        <li><a href="login.php">Войти</a></li>
+        <li><?php if($_COOKIE['user'] ==''): ?><a href="login.php">Войти</a><?php else: ?><a href="exit.php">Выйти</a><?php endif; ?></p></li>
       </ul>
     </nav>
 </header> 
@@ -33,3 +33,4 @@
 </form>
 </body>
 </html>  
+
