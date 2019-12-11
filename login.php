@@ -9,8 +9,8 @@
   <a href="" class="logo">Библиотека</a>
   <nav>
       <ul class="topmenu">
-        <li><a href="main.html">Главная</a></li>
-        <li><a href="" class="submenu-link">Категория</a>
+        <li><a href="main.php">Главная</a></li>
+        <li><a href="catalog.php" class="submenu-link">Категория</a>
           <ul class="submenu">
             <li><a href="">Понравилось пользователям</a></li>
             <li><a href="">Русская литература</a></li>
@@ -18,25 +18,28 @@
           </ul>
         </li>
         <li><a href="search.php">Поиск</a></li>
-        <li><a href="login.php">Войти</a></li>
+        <li><?php if($_COOKIE['user'] ==''): ?><a href="login.php">Войти</a><?php else: ?><a href="exit.php">Выйти</a><?php endif; ?></li>
       </ul>
     </nav>
 </header> 
 <body>
-<form action="action_page.php" method="post">
+<form action="checkaut.php" method="post">
+   <?php
+   if($_COOKIE['user'] ==''):
+     ?>
    <div>
     <h1>Войти</h1>
     <p>Пожалуйста, введите данные для входа.</p>
     <hr>
-    <label for="uname"><b>Имя пользователя</b></label><br>
-    <input type="text" placeholder="Введите имя пользователя" name="uname" required>
-
-    <label for="psw"><b>Пароль</b></label>
-    <input type="password" placeholder="Введите пароль" name="psw" required>
-
-    <button type="submit">Войти</button>
-   <span class="psw">Ещё не <a style="color: #D5B45B" href="reg.php">зарегистрированы?</a></span>
-   </div>
+    <label for="email"><b>Логин</b></label>
+    <input type="text" placeholder="Введите логин" name="email" required>
+    <label for="password"><b>Пароль</b></label>
+    <input type="password" placeholder="Введите пароль" name="password" required>
+    <button type="submit">Войти</button> <p style="text-align: right">Ещё не <a style="color: #D5B45B" href="reg.php">зарегистрированы?</a></p>
+	<?php else: ?>
+	<p>Вы уже вошли.</p>
+	<?php endif; ?></p>
+    </div>
 </form>
 </body>
-</html>  
+</html> 
