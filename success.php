@@ -6,18 +6,17 @@
  <link rel="stylesheet" href="style.css">
 </head>
 <header>
-  <a href="" class="logo">Библиотека</a>
+  <a href="main.php" class="logo">Библиотека</a>
   <nav>
       <ul class="topmenu">
         <li><a href="main.php">Главная</a></li>
         <li><a href="catalog.php" class="submenu-link">Категория</a>
           <ul class="submenu">
-            <li><a href="">Понравилось пользователям</a></li>
-            <li><a href="">Русская литература</a></li>
-            <li><a href="">Зарубежная литература</a></li>
+            <li><a href="rus.php">Русская литература</a></li>
+            <li><a href="zar.php">Зарубежная литература</a></li>
           </ul>
         </li>
-        <li><a href="search.php">Поиск</a></li>
+        <li><a href="reg.php">Регистрация</a></li>
         <li><a href="login.php">Войти</a></li>
       </ul>
     </nav>
@@ -30,3 +29,4 @@
 </div>
 </body>
 </html>  
+
